@@ -1,8 +1,8 @@
 import React from 'react'
 import WeatherIcons from 'react-weathericons'
-import {CLOUD , SUN , CLOUDY , THUNDERSTORM, SNOW , RAIN} from '../constans/weather'
+import {CLOUD , SUN , CLOUDY , THUNDERSTORM, SNOW , RAIN} from '../../../../constans/weather'
 import  PropTypes  from 'prop-types'
-checkPropTypes
+import '../WeatherLocation.css'
 
 const getWeatherIcon = (weatherState) => {
     switch (weatherState) {
@@ -31,12 +31,15 @@ const getWeatherIcon = (weatherState) => {
 }
 const WeatherTemperature = ({ temperature, weatherState }) => (
 
-    <div>
-
-        <span >{temperature} º <WeatherIcons name={getWeatherIcon(weatherState)} size="2px" /></span>
+    <div className="WeatherTemperature">
+        <WeatherIcons className='wicon' name={getWeatherIcon(weatherState)} size="2x" />
+        <span className="Temperature" >{temperature}</span>
+        <span className="TemperatureType" > C º</span>
     </div>
 )
-WeatherTemperature.PropTypes= {
+//proptypes se utiliza para darle tipado a los atributos de nuestro componente. 
+//en typescript seria similar a  /: temperature : number ;
+WeatherTemperature.propTypes= {
     temperature:PropTypes.number,
     weatherState:PropTypes.string
 }
