@@ -5,3 +5,6 @@ export const THUNDERSTORM = 'thunderstorm';
 export const SNOW = 'snow';
 export const RAIN = 'rain';
 export const CLOUDY = 'cloudy';
+export const DRIZZLE = 'drizzle';
+export const THUNDER = 'thunder';
+

@@ -1,7 +1,7 @@
 import React from 'react'
 import WeatherIcons from 'react-weathericons'
-import {CLOUD , SUN , CLOUDY , THUNDERSTORM, SNOW , RAIN} from '../../../../constans/weather'
-import  PropTypes  from 'prop-types'
+import { CLOUD, SUN, CLOUDY, THUNDERSTORM, SNOW, RAIN, THUNDER, DRIZZLE } from '../../../../constans/weather'
+import PropTypes from 'prop-types'
 import '../WeatherLocation.css'
 
 const getWeatherIcon = (weatherState) => {
@@ -23,7 +23,13 @@ const getWeatherIcon = (weatherState) => {
             break;
         case SUN:
             return "day-sunny"
-            break;    
+            break;
+        case THUNDER:
+            return "lightning"
+            break;
+        case DRIZZLE:
+            return "showers"
+            break;
         default:
             return "day-sunny"
             break;
@@ -39,8 +45,8 @@ const WeatherTemperature = ({ temperature, weatherState }) => (
 )
 //proptypes se utiliza para darle tipado a los atributos de nuestro componente. 
 //en typescript seria similar a  /: temperature : number ;
-WeatherTemperature.propTypes= {
-    temperature:PropTypes.number,
-    weatherState:PropTypes.string
+WeatherTemperature.propTypes = {
+    temperature: PropTypes.number,
+    weatherState: PropTypes.string
 }
 export default WeatherTemperature;

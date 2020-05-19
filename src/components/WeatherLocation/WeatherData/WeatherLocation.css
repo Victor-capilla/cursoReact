@@ -1,7 +1,33 @@
+
+.LocationCont{
+    width: 100%;
+    color: rgba(31, 28, 28, 0.931);
+    margin: 0px;
+    text-align: left;
+    height: 35px;
+    line-height: 35px;
+
+
+}
+.LocationCont h1{
+    margin: 0;
+}
+.weatherLocationContent{
+    box-sizing: border-box;
+    width:100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Roboto', 'sans-serif' ;
+    -webkit-box-shadow: 9px 10px 25px 6px rgba(186,186,186,0.42);
+    -moz-box-shadow: 9px 10px 25px 6px rgba(186,186,186,0.42);
+    box-shadow: 9px 10px 25px 6px rgba(186,186,186,0.42);
+    border-radius: 10px;
+    padding: 15px;
+
+}
 .WeatherTemperature{
-    width: 58%;
+    width: 50%;
     display: inline-block;
-    border-right: 1px solid black;
     height: 100%;
     
 }
@@ -10,12 +36,11 @@
     height: 100px;
     line-height: 100px;
     text-align: center;
-    margin:auto;
     border-radius: 10px;
     
 }
 .WeatherExtraInfo{
-    width: 40%;
+    width: 50%;
     display: inline-block;
     font-size: 9px;
     line-height: 25px;  
@@ -23,7 +48,6 @@
 .Temperature{
     font-size: 30px;
     font-weight: bold;
-    padding-left: 20px;
     color: #333;
 }
 .TemperatureType{
@@ -38,25 +62,4 @@
     color:#129;
     font-size: 15px;
     font-weight: bold;
-}
-.LocationCont{
-    width: 100%;
-    color: rgba(31, 28, 28, 0.931);
-    margin: 0px;
-    text-align: left;
-    height: 35px;
-
-
-}
-.weatherLocationContent{
-    width: 400px;
-    margin-left: 20px;
-    margin-top: 10px;
-    font-family: 'Roboto', 'sans-serif' ;
-    -webkit-box-shadow: 9px 10px 25px 6px rgba(186,186,186,0.42);
-    -moz-box-shadow: 9px 10px 25px 6px rgba(186,186,186,0.42);
-    box-shadow: 9px 10px 25px 6px rgba(186,186,186,0.42);
-    border-radius: 10px;
-    padding: 10px;
-
 }
