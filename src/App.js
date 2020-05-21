@@ -4,6 +4,8 @@ import './App.css';
 import LocationList from './components/WeatherLocation/Location/LocationList';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Paper,AppBar } from 'material-ui';
+import ForecastExtended from './components/WeatherLocation/ForecastExtended';
+
 const cities = [
   'Madrid',
   'Buenos Aires',
@@ -11,8 +13,15 @@ const cities = [
   'Berlin'
 ]
 class App extends Component {
+  constructor(){
+    super();
+    this.state ={
+      city : null,
+    }
+  }
   handleSelectionLocation = city => {
-    console.log(`hadleSelectedLocation ${city}`)
+   this.setState({city});
+   console.log(city);
 
   }
   render() {
@@ -31,7 +40,14 @@ class App extends Component {
             </Col>
             <Col  xs={12} md={6}>
               <Paper zDepth={4}>
-              <div className="detail"></div>
+              <div className="detail">
+                {
+                  this.state.city ?
+                  <ForecastExtended city={this.state.city}></ForecastExtended> :
+                  <h1>no has elegido ninguna ciudad TRUAN</h1> 
+                }
+              
+              </div>
               </Paper>
             </Col>
           </Row>
